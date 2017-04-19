@@ -4,8 +4,54 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="../Scripts/jquery-3.1.1.min.js"></script>
     <title></title>
+    <script>
+        $(function() {
+            $("#btn_hide").click(function() {
+                $("p").hide(1000, function() {
+                    alert("-)");
+                });
+            });
+            $("#btn_show").click(function() {
+                $("p").show(2000);
+            });
+            $("#btn_toggle").click(function() {
+                $("p").toggle("fast");
+            });
+            $("#btn_fadeIn").click(function () {
+                $("p").fadeIn("slow");
+            });
+            $("#btn_fadeOut").click(function() {
+                $("p").fadeOut(3000);
+            });
+            $("#btn_fadeToggle").click(function() {
+                $("p").fadeToggle(3000);
+            });
+            $("#btn_fadeTo").click(function() {
+                $("p").fadeTo("fast",0);
+            });
+            $("#btn_slideDown").click(function() {
+                $("p").slideDown(2000);
+            });
+            $("#btn_slideUp").click(function() {
+                $("p").slideUp();
+            });
+            $("#btn_slideToggle").click(function() {
+                $("p").slideToggle(3000);
+            });
+        });
+    </script>
 </head>
 <body>
-
+<p>这是一个p元素</p>
+<button id="btn_hide">hide</button>
+<button id="btn_show">show</button>
+<button id="btn_toggle">toggle</button>
+<button id="btn_fadeIn">fadeIn</button>
+<button id="btn_fadeOut">fadeOut</button>
+<button id="btn_fadeToggle">fadeToggle</button>
+<button id="btn_fadeTo">fadeTo</button>
+<button id="btn_slideDown">slideDown</button>
+<button id="btn_slideUp">slideUp</button>
+<button id="btn_slideToggle">slideToggle</button>
 </body>
 </html>
