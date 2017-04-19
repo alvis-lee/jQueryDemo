@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () { 
+            $('p').dblclick(function () {
+                $(this).hide();
+            });
+
+            $('#p1').mouseenter(function () {
+                //alert("mouseenter");
+            });
+
+            $('#p1').mouseleave(function () {
+                //alert("Bye! You now leave p1!");
+            });
+
+            $('#p1').mousedown(function () {
+                //alert("mousedown");
+            });
+
+            $('#p1').mouseup(function () {
+                //alert("mouseup");
+            });
+
+            $('#p1').hover(function () {
+                //alert("hover");
+            });
+
+            $("input").focus(function () {
+                //$(this).css("background-color", "red");
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <p>测试事件</p>
+    <p id="p1">hello</p>
+    <input />
+</body>
+</html>
