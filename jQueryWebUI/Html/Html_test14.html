@@ -3,8 +3,44 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_css_add").click(function () {
+                $("h1,h2,p").addClass("blue");
+                $("div").addClass("important");
+            });
+            $("#btn_css_add2").click(function () {
+                $("div").addClass("important blue");
+            });
+            $("#btn_css_remove").click(function () {
+                $("div").removeClass("important");
+            });
+            $("#btn_css_toggle").click(function () {
+                $("div").toggleClass("important blue");
+            });
+        });
+    </script>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-
+    <button id="btn_css_add">add css</button>
+    <button id="btn_css_add2">add css 2</button>
+    <button id="btn_css_remove">remove css</button>
+    <button id="btn_css_toggle">toggle css</button>
+    <div>
+    <h1>Hello baymax</h1>
+    <h2>Hello Kitty</h2>
+    <p>Hello World</p>
+     </div>
 </body>
 </html>
