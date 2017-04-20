@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_animate").click(function () {
+                $("div").animate({ left: '250px', opacity: '0.5', height: '+=150px', width: '-=150px' });
+            });
+            $("#btn_animate_toggle").click(function () {
+                $("div").animate({ opacity: 'toggle' });
+            });
+            $("#btn_animate_show").click(function () {
+                $("div").animate({ height: 'show' });
+            });
+            $("#btn_animate_hide").click(function () {
+                $("div").animate({ height: 'hide' });
+            });
+            $("#btn_animate_move").click(function () {
+                var div = $("div");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+            $("#btn_animate_font").click(function () {
+                var div = $("div");
+                div.animate({left:"150"}, "slow");
+                div.animate({fontSize:"3em"}, "slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn_animate">animate</button>
+    <button id="btn_animate_toggle">animate toggle</button>
+    <button id="btn_animate_show">animate show</button>
+    <button id="btn_animate_hide">animate hide</button>
+    <button id="btn_animate_move">animate move</button>
+    <button id="btn_animate_font">animate font</button>
+    
+    <div style="background-color: red; width: 250px; height: 250px; position:relative">
+        hello animate
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_remove").click(function () {
+                $("div").remove();
+            });
+            $("#btn_empty").click(function () {
+                $("div").empty();
+            });
+            $("#btn_remote_p").click(function () {
+                $("p").remove(".italic");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn_remove">remove</button>
+    <button id="btn_empty">empty</button>
+    <button id="btn_remote_p">remote p</button>
+    <div>
+        <p class="italic">哈哈哈哈哈</p>
+        <p>嘿嘿嘿嘿嘿嘿</p>
+        <p class ="italic">嘻嘻嘻嘻嘻嘻嘻</p>
+    </div>
+</body>
+</html>

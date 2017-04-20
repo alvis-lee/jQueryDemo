@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_before").click(function () {
+                $("p").before("<b>before</b>,");
+            });
+            $("#btn_after").click(function () {
+                $("p").after(",<b>after</b>");
+            });
+        });
+
+        function afterText() {
+            var text1 = "<a href='www.google.com'>Google</a>";
+            var text2 = $("<b></b>").text("smile");
+            var text3 = document.createElement("p");
+            text3.innerHTML = "好好学习，天天想上";
+            $("p").after(text1, text2, text3);
+        }
+    </script>
+</head>
+<body>
+    <button id="btn_before">before</button>
+    <button id="btn_after">after</button>
+    <button onclick="afterText()">after text</button>
+    <p>Hello Kitty</p>
+</body>
+</html>

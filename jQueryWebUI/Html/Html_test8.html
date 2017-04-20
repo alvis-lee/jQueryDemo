@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle(5000);
+            });
+            $("#btn_stop").click(function () {
+                $("#panel").stop();
+            });
+        });
+    </script>
+    <style>
+        #panel, #flip {
+            padding:5px;
+            text-align:center;
+            background-color:green;
+            border:solid 1px yellow;
+        }
+        #panel {
+            padding:50px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn_stop">stop</button>
+    <p id="flip">点击这里</p>
+    <p id="panel">hello stop</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_text_get").click(function () {
+                alert($("#p1").text());
+            });
+            $("#btn_text_set").click(function () {
+                $("#p1").text("hello Baymax");
+            });
+            $("#btn_html_get").click(function () {
+                alert($("#p1").html());
+            });
+            $("#btn_html_set").click(function () {
+                $("#p1").html("<b>hello</b> baymax");
+            });
+            $("#btn_val_get").click(function () {
+                alert($("#input1").val());
+            });
+            $("#btn_val_set").click(function () {
+                $("#input1").val("hello baymax");
+            });
+            $("#btn_attr_get").click(function () {
+                alert($("#a1").attr("href"));
+            });
+            $("#btn_attr_set").click(function () {
+                $("#a1").attr({"href":"www.bing.com","title":"baymax"});
+            });
+            $("#btn_attr_set2").click(function () {
+                $("#a1").attr("href", function (i, origValue) {
+                    //alert(i);
+                    //alert(origValue);
+                    return "www.baidu.com"; //设置属性值
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn_text_get">get text</button>
+    <button id="btn_text_set">set text</button>
+    <button id="btn_html_get">get html</button>
+    <button id="btn_html_set">set html</button>
+    <button id="btn_val_get">get val</button>
+    <button id="btn_val_set">set val</button>
+    <button id="btn_attr_get">get attr</button>
+    <button id="btn_attr_set">set attr</button>
+    <button id="btn_attr_set2">set attr 2</button>
+    <p id="p1">hello <b>jQuery</b></p>
+    <input type="text" id="input1" value="hello kitty" />
+    <a href="www.google.com" id="a1">google</a>
+</body>
+</html>

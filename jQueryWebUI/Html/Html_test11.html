@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_append_text").click(function () {
+                $("p").append(",new world");
+            });
+            $("#btn_append_item").click(function () { 
+                $("ul").append("<li>New Item</li>");
+            });
+            $("#btn_prepend_text").click(function () {
+                $("p").prepend("Hello World,");
+            });
+            $("#btn_prepend_item").click(function () {
+                $("ul").prepend("<li>pre Item</li>")
+            });
+        });
+
+        function appendText() {
+            var text1 = "<p>你好1！</>";
+            var text2 = $("<p></p>").text("你好2！");
+            var text3 = document.createElement("p");
+            text3.innerHTML = "你好2！"
+            $("body").append(text1, text2, text3);
+        };
+    </script>
+</head>
+<body>
+    <button id="btn_append_text">append text</button>
+    <button id="btn_append_item">append item</button>
+    <button id="btn_prepend_text">prepend text</button>
+    <button id="btn_prepend_item">prepend item</button>
+    <button onclick="appendText()">create&append text</button>
+    <p>Hello Baymax</p>
+    <p>Hello Kitty</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+</body>
+</html>
